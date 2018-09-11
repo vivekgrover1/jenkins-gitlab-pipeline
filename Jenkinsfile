@@ -47,7 +47,7 @@ pipeline {
         }
         stage ('SCM Checkout') {
             steps {
-                git url: "${repo}", branch: "${branch}", credentialsId: 'f7fa1261-261c-4b61-9531-fce17361ec2d'
+                git url: "${repo}", branch: "${branch}", credentialsId: 'f....................................'
             }
         }
         
