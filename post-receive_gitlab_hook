@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-receive".
+
+
+# set this to your active development branch
+
+BRANCH="master"
+
+while read oldrev newrev ref
+do
+        # only checking out the master (or whatever branch you would like to deploy)
+        if [[ $ref = refs/heads/$BRANCH ]];
+        then
+             curl -X POST "http://jenkins:jenkins_user_tokene@hostname:port/job/Applicationtest1/buildWithParameters?token=build&product=Applicationtest1&branch=master"
+        fi
+done
