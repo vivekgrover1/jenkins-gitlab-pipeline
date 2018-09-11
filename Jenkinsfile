@@ -66,6 +66,7 @@ pipeline {
                  sh '''
                   cat $product | grep -i qaregistry.yatra.com | grep Building | cut -d/ -f2>image
                   imagename=`cat image`
+                  kubectl set image deployment/$product $product=registry.yatra.com/$imagename
                   
                 ''' 
                 
