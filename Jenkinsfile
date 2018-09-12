@@ -6,7 +6,7 @@ import groovy.json.JsonOutput
 
 def slackNotificationChannel = '#jenkins-notifications'  // ex: = "builds"
 
-
+// Function to notifiy on slack channel.
 def notifySlack(text, channel, status) {
     def slackURL = 'https://hooks.slack.com/services/T....../B........./m.........................'
     def jenkinsIcon = 'https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png'
@@ -66,7 +66,7 @@ pipeline {
         stage ('Kube Deployment ') {
             steps {
          
-                 // It assume kubectl is already install agennt pointing to master kubernetes server.
+                 // It assume kubectl is already install on agent pointing to master kubernetes server.
                  sh '''
                   cat $product | grep -i qaregistry.yatra.com | grep Building | cut -d/ -f2>image
                   imagename=`cat image`
