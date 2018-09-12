@@ -1,7 +1,7 @@
 # jenkins-gitlab-pipeline
 jenkins-gitlab-pipeline
 
-## Use below instructions to create the gitlab custom hooks.
+### Use below instructions to create the gitlab custom hooks.
 
 ```
 1) Pick a project that needs a custom Git hook.
