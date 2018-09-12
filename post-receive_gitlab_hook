@@ -2,11 +2,11 @@
 #
 # An example hook script to prepare a packed repository for use over
 # dumb transports.
-#
+# 
 # To enable this hook, rename this file to "post-receive".
 
 
-# set this to your active development branch
+# set this to your active deployment branch
 
 BRANCH="master"
 
