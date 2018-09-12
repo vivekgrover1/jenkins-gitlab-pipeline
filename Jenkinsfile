@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+// Declarative Syntax Jenkins Pipeline
+
 import groovy.json.JsonOutput
 
 def slackNotificationChannel = '#jenkins-notifications'  // ex: = "builds"
@@ -63,6 +65,7 @@ pipeline {
         stage ('Kube Deployment ') {
             steps {
          
+                 // It assume kubectl is already install agennt pointing to master kubernetes server.
                  sh '''
                   cat $product | grep -i qaregistry.yatra.com | grep Building | cut -d/ -f2>image
                   imagename=`cat image`
