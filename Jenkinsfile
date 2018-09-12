@@ -49,6 +49,7 @@ pipeline {
         }
         stage ('SCM Checkout') {
             steps {
+                // It is parametrized pipeline and get the git url and branch from the parameter repo and branch
                 git url: "${repo}", branch: "${branch}", credentialsId: 'f....................................'
             }
         }
